@@ -6,7 +6,7 @@ namespace GeometryLibrary.Graph
     /// <summary>
     /// Класс настроек для создания графика.
     /// </summary>
-    internal class GraphOptions
+    public class GraphOptions
     {
         /// <summary>
         /// Размер сетки графика.

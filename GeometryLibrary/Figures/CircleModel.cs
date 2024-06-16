@@ -11,17 +11,17 @@ namespace GeometryLibrary.Figures
         /// <summary>
         /// Конструктор фигуры. Положение и радиус задаются двумя точками.
         /// </summary>
-        /// <param name="point1"></param>
-        /// <param name="point2"></param>
-        public CircleModel(Point point1, Point point2)
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <param name="name"></param>
+        public CircleModel(Point p1, Point p2, string? name = null) : base(new Point[] { p1, p2 }, name)
         {
-            Points.Add(point1);
-            Points.Add(point2);
+
         }
 
         public override double GetSquare()
         {
-            return Math.PI * Math.Pow(GetLineLength(Points[0], Points[1]), 2);
+            return Math.Round(Math.PI * Math.Pow(GetLineLength(Points[0], Points[1]), 2), 2);
         }
     }
 }

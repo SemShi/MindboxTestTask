@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace GeometryLibrary
 {
-    internal class GraphArea
+    public class GraphArea
     {
         /// <summary>
         /// Настройки.
@@ -54,7 +54,7 @@ namespace GeometryLibrary
             where T : FigureBase
         {
             if (!IsFigureInsideGraph(figure.Points))
-                throw new Exception($"Фигура не вписывается в график.");
+                throw new ArgumentOutOfRangeException($"Фигура не вписывается в график.");
 
             _figures.Add(figure);
             return true;

@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GeometryLibrary.Figures.Base
 {
@@ -12,7 +13,17 @@ namespace GeometryLibrary.Figures.Base
         /// <summary>
         /// Набор координат.
         /// </summary>
-        public List<Point> Points { get; set; }
+        public List<Point> Points { get; set; } = new List<Point>();
+
+        protected FigureBase(IEnumerable<Point> points, string? name = null)
+        {
+            var doubles = points.GroupBy(x => x).Where(g => g.Count() > 1).Select(g => g.Key).ToList();
+            if (doubles.Any())
+                throw new ArgumentException("Все точки должны быть уникальными.");
+
+            Name = name ?? Guid.NewGuid().ToString();
+            Points.AddRange(points);
+        }
 
         /// <summary>
         /// Получить длину отрезка.

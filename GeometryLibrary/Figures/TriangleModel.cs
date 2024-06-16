@@ -1,21 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GeometryLibrary.Figures.Base;
 using System.Drawing;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GeometryLibrary.Figures.Base;
 
 namespace GeometryLibrary.Figures
 {
     public class TriangleModel : FigureBase
     {
-        public TriangleModel(Point point1, Point point2, Point point3)
+        /// <summary>
+        /// Конструктор фигуры. Положение здается тремя точками.
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <param name="p3"></param>
+        /// <param name="name"></param>
+        public TriangleModel(Point p1, Point p2, Point p3, string? name = null) : base(new Point[] { p1, p2, p3 }, name)
         {
-            Points.Add(point1);
-            Points.Add(point2);
-            Points.Add(point3);
+
         }
 
         public override double GetSquare()

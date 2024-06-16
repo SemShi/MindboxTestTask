@@ -11,13 +11,10 @@ namespace GeometryLibrary.Figures
         /// <summary>
         /// Конструктор фигуры. Положение здается двумя точками.
         /// </summary>
-        /// <param name="point1"></param>
-        /// <param name="point2"></param>
-        public LineModel(Point point1, Point point2)
-        {
-            Points.Add(point1);
-            Points.Add(point2);
-        }
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <param name="name"></param>
+        public LineModel(Point p1, Point p2, string? name = null) : base(new Point[] {p1, p2}, name) { }
 
         public override double GetSquare()
         {

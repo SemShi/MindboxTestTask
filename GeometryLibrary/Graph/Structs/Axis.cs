@@ -1,6 +1,6 @@
 ﻿namespace GeometryLibrary.Graph.Structs
 {
-    internal struct Axis
+    public struct Axis
     {
         public int Max;
         public int Min;
@@ -11,7 +11,7 @@
             Max = max;
 
             if (Min > Max)
-                throw new Exception("Ошибка. Проверьте правильность введённых данных.");
+                throw new ArgumentException("Ошибка. Проверьте правильность введённых данных.");
         }
     }
 }

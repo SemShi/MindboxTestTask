@@ -2,7 +2,7 @@
 
 namespace GeometryLibrary.Graph.Structs
 {
-    internal struct GraphSize
+    public struct GraphSize
     {
         public Axis AxisX;
         public Axis AxisY;
