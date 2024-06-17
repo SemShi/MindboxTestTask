@@ -5,7 +5,7 @@ namespace Tests
     public class FigureTests
     {
         /// <summary>
-        /// Вычисление площади треугольника по координатам.
+        /// Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј.
         /// </summary>
         [Fact]
         public void Get_Square_Triangle_By_Coordinates()
@@ -21,7 +21,7 @@ namespace Tests
         }
 
         /// <summary>
-        /// Вычисление площади круга по радиусу=5.
+        /// Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё РєСЂСѓРіР° РїРѕ СЂР°РґРёСѓСЃСѓ=5.
         /// </summary>
         [Fact]
         public void Get_Square_Circle_By_Radius()
@@ -37,7 +37,7 @@ namespace Tests
         }
 
         /// <summary>
-        /// Выкидываем исключение при создании фигуры с одинаковыми точками.
+        /// Р’С‹РєРёРґС‹РІР°РµРј РёСЃРєР»СЋС‡РµРЅРёРµ РїСЂРё СЃРѕР·РґР°РЅРёРё С„РёРіСѓСЂС‹ СЃ РѕРґРёРЅР°РєРѕРІС‹РјРё С‚РѕС‡РєР°РјРё.
         /// </summary>
         [Fact]
         public void Get_Exception_With_Not_Unique_Points()
